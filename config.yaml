@@ -1,0 +1,15 @@
+options:
+  volume-backend-name:
+    default: g350
+    type: string
+    description: |
+        Volume backend name for the backend. The default value is the
+        application name in the Juju model, e.g. "cinder-mybackend"
+        if it's deployed as `juju deploy cinder-g350 cinder-mybackend`.
+        A common backend name can be set to multiple backends with the
+        same characters so that those can be treated as a single virtual
+        backend associated with a single volume type.
+  hitachi_pool:
+    type: int
+    description: pool
+    default: 0
